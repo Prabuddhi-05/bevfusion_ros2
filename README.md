@@ -21,29 +21,6 @@ docker/
 ├── Dockerfile
 ```
 
-## Dockerfile
-
-```Dockerfile
-FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
-
-# Install prerequisites
-RUN apt update && apt install -y git cmake gcc-9 g++-9 curl wget unzip python3 python3-pip python3-dev libopencv-dev libpcl-dev ros-humble-desktop-full ros-humble-rmw-cyclonedds-cpp ros-humble-tf2-ros ros-humble-pcl-conversions
-
-# Copy and install TensorRT, CUDA, cuDNN
-COPY TensorRT-8.5.3.1.tar.gz /tmp/
-RUN tar -xzf /tmp/TensorRT-8.5.3.1.tar.gz -C /opt/
-
-COPY cudnn-linux-x86_64-8.6.0.tgz /tmp/
-RUN tar -xzf /tmp/cudnn-linux-x86_64-8.6.0.tgz -C /usr/local/
-
-ENV CUDA_HOME=/usr/local/cuda-11.8
-ENV TensorRT_ROOT=/opt/TensorRT-8.5.3.1
-ENV LD_LIBRARY_PATH=${TensorRT_ROOT}/lib:${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
-ENV PATH=${CUDA_HOME}/bin:${TensorRT_ROOT}/bin:${PATH}
-
-RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/*
-```
-
 ## Setup ROS Workspace (on Host Machine)
 
 ```bash
