@@ -150,7 +150,7 @@ Use the provided modified versions of key files to ensure correct toolkit paths 
 Use provided modified versions:
 
 * **CMakeLists.txt**: Updated to include the paths for CUDA, TensorRT and Protobuf
-* **tool/environment.sh**: Updated to include the environment variables for CUDA, cuDNN, and TensorRT and sets `DEBUG_MODEL` (e.g., `resnet50`) and `DEBUG_PRECISION` (e.g., `fp16`) to match `bevfusion.launch.py`.
+* **tool/environment.sh**: Updated to include the environment variables for CUDA, cuDNN, and TensorRT and sets `DEBUG_MODEL` (e.g., `resnet50`/`resnet50int8`/`swint`) and `DEBUG_PRECISION` (e.g., `fp16`/`int8`) to match `bevfusion.launch.py`. Do not use `int8` with `swint`.  
 
 Ensure consistency between `environment.sh` and your launch file.
 
