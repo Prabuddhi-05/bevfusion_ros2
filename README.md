@@ -1,6 +1,6 @@
 # BEVFusion with ROS2 - Docker Setup
 
-This repository explains step-by-step how to set up BEVFusion-ROS-TensorRT inside a Docker container with CUDA 11.8, cuDNN 8.6.0, and TensorRT 8.5.
+This repository provides a comprehensive step-by-step setup for running BEVFusion-ROS-TensorRT inside a Docker container configured with CUDA 11.8, cuDNN 8.6.0, and TensorRT 8.5.
 
 ## Prerequisites
 
