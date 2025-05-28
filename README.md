@@ -102,51 +102,6 @@ rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 
 ## Changes in Files
 
-Use the provided modified versions of key files to ensure correct toolkit paths and runtime configurations:
-
-- **`CMakeLists.txt`**  
-  Updated to include paths for:
-  - **CUDA 11.8**
-  - **cuDNN 8.6.0**
-  - **TensorRT 8.5**
-  - **Protobuf 3.6.1**
-
-  These changes ensure the build system correctly locates required headers and libraries.
-
-- **`environment.sh`**  
-  This is a comprehensive and idempotent environment setup script designed for BEVFusion with ROS 2 and TensorRT. It includes:
-
-  1. **Path Configuration**
-     - Sets environment variables for CUDA, cuDNN, and TensorRT.
-     - Sets `DEBUG_MODEL` (e.g., `resnet50`) and `DEBUG_PRECISION` (e.g., `fp16`) to match `bevfusion.launch.py`.
-
-  2. **Validation**
-     - Verifies that required executables like `trtexec` and `nvcc` exist.
-
-  3. **Python Support (optional)**
-     - Dynamically sets `Python_Inc`, `Python_Lib`, and `Python_Soname` if Python support is enabled.
-
-  4. **Path Deduplication**
-     - Appends all paths (`PATH`, `LD_LIBRARY_PATH`, `PYTHONPATH`) only if not already included.
-
-  5. **GPU Architecture Detection**
-     - Automatically sources `tool/cudasm.sh` to detect and export the current GPU’s compute capability (`CUDASM`).
-
-  6. **Idempotency**
-     - Prevents re-sourcing the script if it has already been sourced during the session.
-
-> 🆚 **Difference from minimal setup**  
-> Unlike a basic configuration like:
-> ```bash
-> export DEBUG_MODEL=resnet50
-> export DEBUG_PRECISION=fp16
-> ```
-> which only sets two variables, this full `environment.sh` script ensures the entire runtime and build environment is fully configured and ready for BEVFusion execution.
-
-
-
-## Changes in Files
-
 Use provided modified versions:
 
 * **CMakeLists.txt**: Updated to include the paths for CUDA, TensorRT and Protobuf
