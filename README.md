@@ -32,7 +32,7 @@ git clone https://github.com/linClubs/BEVFusion-ROS-TensorRT.git
 cd BEVFusion-ROS-TensorRT
 git checkout humble-devel
 ```
-Alternatively, you can download the full folder and place it inside bevfusion_ws/src/, then rename it to ```BEVFusion-ROS-TensorRT ```. This saves you from manually cloning and checking out the branch.
+Alternatively, you can download the full folder and place it inside ```bevfusion_ws/src/```, then rename it to ```BEVFusion-ROS-TensorRT ```. This saves you from manually cloning and checking out the branch.
 
 ## Docker Build and Run
 
