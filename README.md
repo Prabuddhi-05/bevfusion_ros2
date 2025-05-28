@@ -55,13 +55,6 @@ docker run --gpus all -it \
   bevfusion:cu118-trt85
 ```
 
-* **Enable RViz**:
-
-```bash
-export QT_X11_NO_MITSHM=1
-export QT_QPA_PLATFORM=xcb
-```
-
 ### Manage Container
 
 * **Start again**:
@@ -142,6 +135,13 @@ cd src/BEVFusion-ROS-TensorRT
 cd ~/bevfusion_ws
 source install/setup.bash
 ros2 launch bevfusion bevfusion.launch.py
+```
+
+### Enable RViz 
+
+```bash
+export QT_X11_NO_MITSHM=1
+export QT_QPA_PLATFORM=xcb
 ```
 
 ### Launch RViz
