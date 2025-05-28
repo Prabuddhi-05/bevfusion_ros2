@@ -4,7 +4,7 @@ This repository explains step-by-step how to set up BEVFusion-ROS-TensorRT insid
 
 ## Prerequisites
 
-Download the following into your working folder (`~/bevfusion_docker`):
+Download the following into your working folder (`~/docker`):
 
 * **CUDA 11.8** [Runfile](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=runfile_local)
 * **cuDNN 8.6.0** from [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive)
@@ -14,7 +14,7 @@ Download the following into your working folder (`~/bevfusion_docker`):
 Ensure your folder structure is as follows:
 
 ```
-bevfusion_docker/
+docker/
 ├── cuda_11.8.0.run
 ├── cudnn-linux-x86_64-8.6.0.tgz
 ├── TensorRT-8.5.3.1.tar.gz
