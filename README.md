@@ -169,5 +169,3 @@ Test the setup with a ROS2 bag generated using:
 ```bash
 rm -rf build/ install/ log/
 ```
-
-With these steps, you now have a consistent, functional environment for BEVFusion-ROS2.
