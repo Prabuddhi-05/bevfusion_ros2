@@ -124,7 +124,7 @@ colcon build --symlink-install
 
 ```bash
 cd src/BEVFusion-ROS-TensorRT
-./tool/build_trt_engine.sh resnet50 fp16
+./tool/build_trt_engine.sh swint fp16
 ```
 
 ## Launch BEVFusion
