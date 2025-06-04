@@ -41,10 +41,13 @@ Alternatively, you can download the full folder and place it inside ```bevfusion
 ```bash
 docker build -t bevfusion:cu118-trt85 .
 ```
-
 ### Run Docker Container
 
 ```bash
+
+# Allow Docker container to access host X server
+xhost +local:root
+
 docker run --gpus all -it \
   --name bevfusion_ros2 \
   -v ~/bevfusion_ws:/workspace/bevfusion_ws \
